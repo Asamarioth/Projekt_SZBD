@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Projekt_SZBD.Models.ADRES>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ulica)
+        </th>
+        <th>
+            Kod pocztowy
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Miejscowosc)
+        </th>
+        <th>
+            Numer domu
+        </th>
+        <th>
+            Numer mieszkania
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ulica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kod_Pocztowy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Miejscowosc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numer_Domu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numer_Mieszkania)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Adresu }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_Adresu }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Adresu })
+        </td>
+    </tr>
+}
+
+</table>

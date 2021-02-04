@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Projekt_SZBD.Models.POZYCJA_ZAMOWIENIA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Czy_Kupno_Od_Klienta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kwota)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ilosc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EGZEMPLARZ.ID_Egzemplarza)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MAGAZYN.Opis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRODUKT.Nazwa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZAMOWIENIA.ID_Zamowienia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Czy_Kupno_Od_Klienta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kwota)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ilosc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EGZEMPLARZ.ID_Egzemplarza)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAGAZYN.Opis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRODUKT.Nazwa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZAMOWIENIA.ID_Zamowienia)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Pozycji_Zamowienia }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_Pozycji_Zamowienia }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Pozycji_Zamowienia })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,42 @@
+﻿@model Projekt_SZBD.Models.ZAMOWIENIA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ZAMOWIENIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Data_Zlozenia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data_Zlozenia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KLIENT.Nazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KLIENT.Nazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRACOWNIK.Nazwisko)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRACOWNIK.Nazwisko)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Zamowienia }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

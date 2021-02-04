@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Projekt_SZBD.Models.ZAMOWIENIA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Data_Zlozenia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KLIENT.Nazwa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRACOWNIK.Nazwisko)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data_Zlozenia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KLIENT.Nazwa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRACOWNIK.Nazwisko)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Zamowienia }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_Zamowienia }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Zamowienia })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,80 @@
+﻿@model Projekt_SZBD.Models.POZYCJA_ZAMOWIENIA
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>POZYCJA_ZAMOWIENIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Czy_Kupno_Od_Klienta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Czy_Kupno_Od_Klienta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kwota)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kwota)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ilosc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ilosc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EGZEMPLARZ.ID_Egzemplarza)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EGZEMPLARZ.ID_Egzemplarza)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MAGAZYN.Opis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MAGAZYN.Opis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRODUKT.Nazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRODUKT.Nazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZAMOWIENIA.ID_Zamowienia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZAMOWIENIA.ID_Zamowienia)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

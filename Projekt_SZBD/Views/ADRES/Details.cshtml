@@ -1,0 +1,58 @@
+﻿@model Projekt_SZBD.Models.ADRES
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ADRES</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ulica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ulica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kod_Pocztowy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kod_Pocztowy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Miejscowosc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Miejscowosc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numer_Domu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numer_Domu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numer_Mieszkania)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numer_Mieszkania)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Adresu }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

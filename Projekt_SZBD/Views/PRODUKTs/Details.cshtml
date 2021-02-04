@@ -1,0 +1,42 @@
+﻿@model Projekt_SZBD.Models.PRODUKT
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PRODUKT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cena_Kupno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cena_Kupno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cena_Sprzedaz)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cena_Sprzedaz)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Produktu }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
